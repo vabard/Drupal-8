@@ -1,0 +1,11 @@
+id: term_unpush_action
+label: 'Unpush term action'
+status: true
+langcode: en
+type: taxonomy_term
+plugin: term_unpush_action
+dependencies:
+  module:
+    - taxonomy
+    - custom_bulk_operations
+

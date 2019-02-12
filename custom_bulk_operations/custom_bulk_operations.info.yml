@@ -1,0 +1,5 @@
+name: 'custom_bulk_operations'
+type: module
+description: 'Provide custom actions'
+core: 8.x
+package: 'custom'

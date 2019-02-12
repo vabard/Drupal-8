@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains custom_bulk_operations.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function custom_bulk_operations_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the custom_bulk_operations module.
+    case 'help.page.custom_bulk_operations':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('custom Bulk operations') . '</p>';
+      return $output;
+
+    default:
+  }
+}

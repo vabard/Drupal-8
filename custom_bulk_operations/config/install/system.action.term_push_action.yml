@@ -1,0 +1,11 @@
+id: term_push_action
+label: 'Push term action'
+status: true
+langcode: en
+type: taxonomy_term
+plugin: term_push_action
+dependencies:
+  module:
+    - taxonomy
+    - custom_bulk_operations
+
