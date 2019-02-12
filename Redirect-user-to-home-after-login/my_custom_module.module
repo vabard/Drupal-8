@@ -1,0 +1,25 @@
+<?php
+/** Drupal 8 custom module **/
+/** File: my_custom_module.module**/
+
+/**
+ * Implements hook_user_login().
+ * Changes default login destination to homepage.
+ */
+function my_custom_module_user_login(\Drupal\user\UserInterface $account) {
+  // Gets current page.
+  $currentPath = \Drupal::service('request_stack')->getCurrentRequest();
+  // Checks if current pas is password reset page.
+  $isReset = strpos($currentPath, 'user_pass_reset');
+
+  // Gets current request.
+  $currentRequest = \Drupal::service('request_stack')->getCurrentRequest();
+  
+  // If we are not on a home page and not on a reset page, we redirect user to homepage.
+  if (!$currentRequest->query->get('destination') && $isReset === FALSE) {
+    $currentRequest->query->set(
+      'destination',
+      '/'
+    );
+  }
+}
