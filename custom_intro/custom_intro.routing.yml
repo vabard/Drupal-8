@@ -1,0 +1,8 @@
+custom_intro.event_intro_config_form:
+  path: '/admin/content/introduction'
+  defaults:
+    _form: '\Drupal\custom_intro\Form\EventIntroConfigForm'
+    _title: 'Configuration section "Introduction"'
+  requirements:
+    _access: 'TRUE'
+    _permission: 'access administration pages'

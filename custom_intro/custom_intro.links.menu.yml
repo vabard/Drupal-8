@@ -1,0 +1,4 @@
+custom_intro.event_intro_config_form:
+  title: Introduction
+  route_name: custom_intro.event_intro_config_form
+  parent: system.admin_content

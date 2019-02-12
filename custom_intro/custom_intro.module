@@ -1,0 +1,15 @@
+<?php
+
+/**
+ * Implements hook_theme().
+ */
+function custom_intro_theme($existing, $type, $theme, $path) {
+  return [
+    'EventIntroduction' => [
+      'variables' => [
+        'title' => '',
+        'backgroundImage' => '',
+      ],
+    ],
+  ];
+}
